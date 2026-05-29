@@ -8,7 +8,7 @@ Rust desktop utility that pulls remote subscription feeds, merges proxy-style co
 
 ## Screenshot
 
-![Config Aggregator UI](docs/screenshot.png)
+
 
 ## What it does
 
