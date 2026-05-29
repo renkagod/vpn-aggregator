@@ -3,6 +3,9 @@ name = "vpn-aggregator"
 version = "1.3.0"
 edition = "2021"
 description = "Subscription config aggregator with TCP health checks (egui desktop app)"
+license = "MIT"
+repository = "https://github.com/renkagod/vpn-aggregator"
+authors = ["renkagod"]
 
 [dependencies]
 eframe = "0.31"
@@ -16,7 +19,7 @@ rfd = "0.15"
 uuid = { version = "1.8", features = ["v4"] }
 image = "0.25"
 
-[build-dependencies]
+[target.'cfg(windows)'.build-dependencies]
 winres = "0.1"
 
 [profile.release]

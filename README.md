@@ -3,6 +3,12 @@
 Rust desktop utility that pulls remote subscription feeds, merges proxy-style config lines, deduplicates them, and optionally filters by TCP reachability. Built with **egui/eframe**, **reqwest**, and **tokio**.
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
+![License](https://img.shields.io/github/license/renkagod/vpn-aggregator)
+![CI](https://github.com/renkagod/vpn-aggregator/actions/workflows/ci.yml/badge.svg)
+
+## Screenshot
+
+![Config Aggregator UI](docs/screenshot.png)
 
 ## What it does
 
@@ -36,7 +42,6 @@ cargo build --release
 
 Release artifact: `target/release/vpn-aggregator` (`.exe` on Windows).
 
-## Notes
+## License
 
-- `target/`, `*.exe`, `*.pdb`, and local output files are gitignored.
-- Crate / repo folder name remains `vpn-aggregator` for history; display name above is portfolio-neutral.
+MIT — see [LICENSE](LICENSE).

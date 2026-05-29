@@ -2,7 +2,6 @@
 *.exe
 *.pdb
 .env
-Cargo.lock
 
 # App output
 subscription.txt
