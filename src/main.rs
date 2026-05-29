@@ -15,7 +15,7 @@ fn main() -> eframe::Result {
     
     let options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_title("VPN Aggregator")
+            .with_title("Config Aggregator")
             .with_inner_size([800.0, 660.0])
             .with_resizable(false)
             .with_maximize_button(false)
@@ -24,7 +24,7 @@ fn main() -> eframe::Result {
     };
 
     eframe::run_native(
-        "VPN Aggregator",
+        "Config Aggregator",
         options,
         Box::new(|cc| {
             cc.egui_ctx.set_visuals(egui::Visuals::dark());
@@ -170,7 +170,7 @@ impl eframe::App for App {
                 ui.horizontal(|ui| {
                     ui.checkbox(&mut self.deduplicate, "Remove duplicate configs");
                     ui.checkbox(&mut self.check_configs, "Detailed ping check (TCP)");
-                    ui.checkbox(&mut self.emulate_hwid, "HWID Emulation");
+                    ui.checkbox(&mut self.emulate_hwid, "Client identity headers");
                 });
 
                 ui.horizontal(|ui| {
@@ -256,7 +256,7 @@ impl eframe::App for App {
                         }
                     });
                 ui.add_space(8.0);
-                ui.label(egui::RichText::new(format!("Session HWID: {}", self.hwid)).color(egui::Color32::DARK_GRAY).small());
+                ui.label(egui::RichText::new(format!("Session device ID: {}", self.hwid)).color(egui::Color32::DARK_GRAY).small());
 
                 if !self.is_loading && (self.status.contains("Done") || self.status.contains("Success") || self.status.contains("Ready")) {
                     ui.add_space(10.0);
@@ -368,7 +368,7 @@ fn run_core_logic(urls: Vec<String>, tx: mpsc::Sender<WorkerMsg>, ctx: egui::Con
                 let ctx_c = ctx.clone();
                 tasks.push(tokio::spawn(async move {
                     let mut res = ConfigResult {
-                        protocol: "vpn".into(),
+                        protocol: "cfg".into(),
                         addr: "???".into(),
                         ping_ms: None,
                         is_alive: false,

@@ -1,4 +1,16 @@
 /target/
 *.exe
+*.pdb
 .env
 Cargo.lock
+
+# App output
+subscription.txt
+
+# Local scan / analysis artifacts
+scan/
+scan-*/
+*scan*.json
+*scan*.txt
+*scan*.xml
+*.sarif
