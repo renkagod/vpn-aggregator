@@ -1,10 +1,10 @@
 # Subscription Config Aggregator & TCP Health Checker
 
-Rust desktop utility that pulls remote subscription feeds, merges proxy-style config lines, deduplicates them, and optionally filters by TCP reachability. Built with **egui/eframe**, **reqwest**, and **tokio**.
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
-![License](https://img.shields.io/github/license/renkagod/vpn-aggregator)
-![CI](https://github.com/renkagod/vpn-aggregator/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/renkagod/vpn-aggregator/actions/workflows/ci.yml/badge.svg)](https://github.com/renkagod/vpn-aggregator/actions/workflows/ci.yml)
+
+Rust desktop utility that pulls remote subscription feeds, merges proxy-style config lines, deduplicates them, and optionally filters by TCP reachability. Built with **egui/eframe**, **reqwest**, and **tokio**.
 
 ## Screenshot
 
@@ -44,4 +44,4 @@ Release artifact: `target/release/vpn-aggregator` (`.exe` on Windows).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+[MIT](LICENSE) — Copyright (c) 2026 [renkagod](https://github.com/renkagod).
